@@ -1,5 +1,7 @@
 package org.example;
 
+import java.text.DecimalFormat;
+
 public class Homework_303_2_1 {
     public static void main(String[] args) {
         int var1 = 10;
@@ -63,5 +65,8 @@ public class Homework_303_2_1 {
         totalSale = subtotal + (subtotal*SALES_TAX);
         String formattedTotalSale = String.format("%.2f", totalSale);
         System.out.println(formattedTotalSale);
+
+        DecimalFormat df = new DecimalFormat("0.00");
+        System.out.println(df.format(totalSale));
     }
 }
