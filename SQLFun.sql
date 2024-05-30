@@ -78,3 +78,10 @@ SELECT    firstName, lastName, reportsTo
 FROM    employees
 ORDER BY reportsTo DESC;
 
+/* GLAB - 304.5.1 */
+SELECT orderNumber, SUM(quantityOrdered) as Qty,
+    IF(MOD(SUM(quantityOrdered),2),'Odd', 'Even') as oddOrEven
+FROM    orderdetails
+GROUP BY    orderNumber
+ORDER BY    orderNumber;    
+
