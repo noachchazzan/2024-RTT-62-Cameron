@@ -35,7 +35,6 @@ ORDER BY
 /*The output should display all vintage cars first (sorted alphabetically by name), and all classic cars last (also sorted alphabetically by name). */
 /* Display the name, product line, scale, and vendor of all of the car products – both classic and vintage. */
 /* The output should display all vintage cars first (sorted alphabetically by name), and all classic cars last (also sorted alphabetically by name). */
-
 SELECT 
     productName AS 'Name', 
     productLine AS 'Product Line', 
@@ -46,21 +45,9 @@ FROM
 WHERE 
     productLine = 'Vintage Cars'
 ORDER BY 
-    productName ASC
-
-UNION ALL
-
-SELECT 
-    productName AS 'Name', 
-    productLine AS 'Product Line', 
-    productScale AS 'Scale', 
-    productVendor AS 'Vendor'
-FROM 
-    products
-WHERE 
-    productLine = 'Classic Cars'
-ORDER BY 
     productName ASC;
+/* need to use union all 
+*/
 
 
 SELECT    orderNumber, orderlinenumber, quantityOrdered * priceEach
@@ -85,3 +72,4 @@ FROM    orderdetails
 GROUP BY    orderNumber
 ORDER BY    orderNumber;    
 
+SELECT TRUNCATE(1.555,1);
